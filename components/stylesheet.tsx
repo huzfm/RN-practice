@@ -4,8 +4,8 @@ import React from "react";
 export default function Style() {
   return (
     <View style={styles.container}>
-      <View style={[styles.box, styles.redBox]}>
-        <Text>Red</Text>
+      <View style={[styles.box, styles.redBox, styles.shadow]}>
+        <Text style={{ justifyContent: "center" }}>Red</Text>
       </View>
       <View style={[styles.box, styles.blueBox]}>
         <Text>Blue</Text>
@@ -28,11 +28,20 @@ const styles = StyleSheet.create({
     borderWidth: 2,
     borderColor: "black",
     borderRadius: 10,
+    justifyContent: "center",
+    alignItems: "center",
   },
   redBox: {
     backgroundColor: "red",
   },
   blueBox: {
     backgroundColor: "blue",
+  },
+  shadow: {
+    elevation: 30,
+    shadowColor: "#333333",
+    shadowOffset: { width: 10, height: 10 },
+    shadowOpacity: 5,
+    shadowRadius: 10,
   },
 });
