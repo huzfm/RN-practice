@@ -1,10 +1,9 @@
-import Flex from "@/components/Flex";
+import Platform from "@/components/Platform";
 
-// import Style from "./../components/stylesheet";
 export default function Home() {
   return (
     <>
-      <Flex />
+      <Platform />
     </>
   );
 }

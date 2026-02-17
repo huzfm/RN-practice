@@ -1,4 +1,4 @@
-import { View, Text, StyleSheet } from "react-native";
+import { View, Text, StyleSheet, Platform } from "react-native";
 import React from "react";
 
 export default function Style() {
@@ -25,7 +25,7 @@ const styles = StyleSheet.create({
     height: 100,
     paddingStart: 10,
     margin: 10,
-    borderWidth: 2,
+    borderWidth: 10,
     borderColor: "black",
     borderRadius: 10,
     justifyContent: "center",
