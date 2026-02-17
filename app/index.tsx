@@ -1,9 +1,9 @@
-import Platform from "@/components/Platform";
+import List from "@/components/List";
 
 export default function Home() {
   return (
     <>
-      <Platform />
+      <List />
     </>
   );
 }
