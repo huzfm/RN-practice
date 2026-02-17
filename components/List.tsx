@@ -27,6 +27,32 @@ export default function List() {
           keyExtractor={(item) => item.id.toString()}
           ItemSeparatorComponent={() => <View style={{ height: 16 }} />}
           ListEmptyComponent={() => <Text>NO Items found</Text>}
+          ListHeaderComponent={() => (
+            <Text
+              style={{
+                textAlign: "center",
+                fontSize: 20,
+                margin: 20,
+                fontWeight: "bold",
+                fontStyle: "italic",
+              }}
+            >
+              Pokemon List
+            </Text>
+          )}
+          ListFooterComponent={
+            <Text
+              style={{
+                textAlign: "center",
+                fontSize: 20,
+                margin: 20,
+                fontWeight: "bold",
+                fontStyle: "italic",
+              }}
+            >
+              end of list
+            </Text>
+          }
           renderItem={({ item }) => {
             console.log(item.id);
 
@@ -35,7 +61,7 @@ export default function List() {
                 <Text
                   style={[
                     styles.cardtext,
-                    { backgroundColor: "red", width: 20 },
+                    { backgroundColor: "red", width: 40 },
                   ]}
                 >
                   {item.id}
