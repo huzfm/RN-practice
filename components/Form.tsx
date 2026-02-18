@@ -1,12 +1,29 @@
-import { StyleSheet, Text, TextInput, View } from "react-native";
+import { StyleSheet, Switch, Text, TextInput, View } from "react-native";
 import React, { useState } from "react";
 
 export default function Form() {
   const [name, setName] = useState("");
+  const [isDarkMode, setIsDarkMode] = useState(false);
   return (
     <View style={styles.container}>
       <Text>{name}</Text>
-      <TextInput style={styles.input} value={name} onChangeText={setName} />
+      <TextInput
+        style={styles.input}
+        value={name}
+        onChangeText={setName}
+        placeholder="Enter your name"
+        secureTextEntry
+        keyboardType="numeric"
+      />
+      <View style={styles.switchContainer}>
+        <Text style={styles.input}>Dark mode</Text>
+        <Switch
+          value={isDarkMode}
+          onValueChange={() => setIsDarkMode((p) => !p)}
+          trackColor={{ true: "blue", false: "red" }}
+          thumbColor="black"
+        />
+      </View>
     </View>
   );
 }
@@ -47,5 +64,11 @@ const styles = StyleSheet.create({
   errorText: {
     color: "red",
     marginBottom: 10,
+  },
+  switchContainer: {
+    flexDirection: "row",
+    alignItems: "center",
+    justifyContent: "space-between",
+    paddingHorizontal: 10,
   },
 });
