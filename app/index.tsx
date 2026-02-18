@@ -1,9 +1,9 @@
-import Form from "@/components/Form";
+import Loginform from "@/components/Loginform";
 
 export default function Home() {
   return (
     <>
-      <Form />
+      <Loginform />
     </>
   );
 }
