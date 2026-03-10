@@ -9,10 +9,10 @@ export default function TabsLayout(){
         tabBarActiveTintColor:"#fff",
         tabBarInactiveTintColor:"#000",
         tabBarStyle:{
-            backgroundColor:"red",
+            backgroundColor:"skyblue",
         },
         headerStyle:{
-            backgroundColor:"red",
+            backgroundColor:"skyblue",
         },
         headerTintColor:"#fff",
         headerTitleStyle:{
@@ -39,7 +39,7 @@ export default function TabsLayout(){
             tabBarIcon :({color}) => (
                 <FontAwesome name="user" size={24} color={color} />
             ),
-            tabBarBadge:4,
+            tabBarBadge: 40,
             title:"exlpore"
         }} />
     </Tabs>
